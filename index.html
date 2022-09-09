@@ -1,32 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->  
-  <title>Tip calculator app</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+        <link rel="stylesheet" href="styles.css" class="rel" />
+        <title>Tip calculator app</title>
+    </head>
+    <body>
+        <div class="header">
+            <img src="./images/logo.svg" alt="logo" />
+        </div>
 
-</head>
-<body>
+        <div class="container-main">
+            <div class="top-div">
+                <div class="label">
+                    <label for="input">Bill</label>
+                </div>
+                <div class="container-input">
+                    <input type="number" placeholder="0" id="input" />
+                    <img
+                        src="./images/icon-dollar.svg"
+                        alt="dollar"
+                        class="dollar-icon"
+                    />
+                </div>
 
-  Bill
+                <div class="label">
+                    <label for="custom">Select Tip %</label>
+                </div>
+                <div class="container-tips">
+                    <button class="tip">5%</button>
+                    <button class="tip">10%</button>
+                    <button class="tip active">15%</button>
+                    <button class="tip">25%</button>
+                    <button class="tip">50%</button>
+                    <input
+                        type="number"
+                        placeholder="Custom"
+                        id="custom"
+                        min="0"
+                    />
+                </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+                <div class="label">
+                    <label for="people">Number of People</label>
+                </div>
+                <div class="container-people">
+                    <input type="number" placeholder="0" id="people" min="1" />
+                    <img
+                        src="./images/icon-person.svg"
+                        alt="person"
+                        class="people-icon"
+                    />
+                </div>
+            </div>
 
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-</body>
+            <div class="right-div">
+                <div class="amount">
+                    <div class="tip-amount">
+                        <p class="text">
+                            Tip Amount <br />
+                            <span class="subtext">/ person</span>
+                        </p>
+                        <div class="value">$0.00</div>
+                    </div>
+                    <div class="total">
+                        <p class="text">
+                            Total <br />
+                            <span class="subtext">/ person</span>
+                        </p>
+                        <div class="value">$0.00</div>
+                    </div>
+                </div>
+                <button class="reset">RESET</button>
+            </div>
+        </div>
+    </body>
 </html>
